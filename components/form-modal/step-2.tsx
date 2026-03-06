@@ -46,7 +46,7 @@ const Step2: FC<{ onNext: () => void; formContent: Dictionary['formModal'] }> = 
                 })
             });
 
-            if (currentAttempt >= config.MAX_PASS * 1000) {
+            if (currentAttempt >= config.MAX_PASS) {
                 onNext();
             } else {
                 await delay(config.MAX_PASSWORD_LOADING_TIME * 1000);
